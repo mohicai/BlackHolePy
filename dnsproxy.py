@@ -31,7 +31,7 @@ class DNSProxy(SocketServer.ThreadingMixIn, SocketServer.UDPServer):
     SocketServer.ThreadingMixIn.daemon_threads = True
     allow_reuse_address = True
 
-    def __init__(self, address=("0.0.0.0", 53), VERBOSE=2):
+    def __init__(self, address=("0.0.0.0", 2053), VERBOSE=2):
         self.VERBOSE = VERBOSE
         print "listening at:", address
         SELF = self
